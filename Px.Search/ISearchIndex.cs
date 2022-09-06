@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Px.Search.Abstractions;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using PX.Search.Abstractions;
 
 namespace Px.Search
 {

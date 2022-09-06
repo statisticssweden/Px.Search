@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using PCAxis.Menu;
 using PCAxis.Paxiom;
-using PCAxis.Menu;
-using System.Web;
-using PX.Search.Abstractions;
+using System;
 
 namespace Px.Search
 {

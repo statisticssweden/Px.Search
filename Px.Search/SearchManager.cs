@@ -1,16 +1,14 @@
-﻿using System;
-using PX.Search.Abstractions;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.Web;
-using PCAxis.Menu;
-using System.Xml;
-using PCAxis.Paxiom.Extensions;
+﻿using PCAxis.Menu;
 using PCAxis.Paxiom;
+using PCAxis.Paxiom.Extensions;
+using Px.Search.Abstractions;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Runtime.Caching;
+using System.Text;
+using System.Xml;
 
 namespace Px.Search
 {
