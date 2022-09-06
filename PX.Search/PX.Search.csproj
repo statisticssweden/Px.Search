@@ -1,11 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+	 <TargetFrameworks>netstandard2.0;net472</TargetFrameworks>
+	  <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	  <PackageId>Px.Search</PackageId>
+	  <MinVerTagPrefix>v</MinVerTagPrefix>
+	  <MinVerDefaultPreReleasePhase>beta</MinVerDefaultPreReleasePhase>
+	  <MinVerSkip Condition="'$(Configuration)' == 'Debug'">true</MinVerSkip>
+	  <SignAssembly>false</SignAssembly>
+	  <AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Description>General search implementation used in PxWeb</Description>
+	  <PackageProjectUrl>https://github.com/statisticssweden/Px.Search</PackageProjectUrl>
+	  <PackageIcon></PackageIcon>
+	  <PackageIconUrl />
+	  <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
-
   <ItemGroup>
+	  <PackageReference Include="MinVer" Version="4.2.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PcAxis.Common" Version="1.0.2" />
     <PackageReference Include="PcAxis.Core" Version="1.0.3" />
@@ -13,13 +30,10 @@
     <PackageReference Include="PCAxis.Menu" Version="1.0.1" />
     <PackageReference Include="PCAxis.PX.Core" Version="1.0.2" />
     <PackageReference Include="PcAxis.Sql" Version="1.1.3" />
+    <PackageReference Include="PX.Search.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Px.Search.Lucene" Version="0.0.3-beta" />
+    <PackageReference Include="Px.Search.Lucene.Legacy" Version="0.0.2-beta" />
     <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\PCAxis.Web.Core\PCAxis.Web.Core.vbproj" />
-    <ProjectReference Include="..\PX.LuceneProvider\PX.LuceneProvider.csproj" />
-    <ProjectReference Include="..\PX.SearchAbstractions\PX.SearchAbstractions.csproj" />
   </ItemGroup>
 
 </Project>

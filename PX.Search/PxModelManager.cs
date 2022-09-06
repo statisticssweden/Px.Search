@@ -5,8 +5,7 @@ using System.Text;
 using PCAxis.Paxiom;
 using PCAxis.Menu;
 using System.Web;
-using PCAxis.Web.Core.Enums;
-using PX.SearchAbstractions;
+using PX.Search.Abstractions;
 
 namespace PX.Search
 {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PX.SearchAbstractions;
+using PX.Search.Abstractions;
 
 namespace PX.Search
 {
