@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using PX.Search.Abstractions;
 
-namespace PX.Search
+namespace Px.Search
 {
     /// <summary>
     /// Interface for search index functionality

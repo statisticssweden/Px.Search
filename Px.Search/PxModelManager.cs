@@ -7,7 +7,7 @@ using PCAxis.Menu;
 using System.Web;
 using PX.Search.Abstractions;
 
-namespace PX.Search
+namespace Px.Search
 {
     /// <summary>
     /// Class for getting PxModel object

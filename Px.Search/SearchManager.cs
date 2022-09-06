@@ -12,7 +12,7 @@ using PCAxis.Paxiom.Extensions;
 using PCAxis.Paxiom;
 using System.Runtime.Caching;
 
-namespace PX.Search
+namespace Px.Search
 {
     public enum SearchProviderVersion{
         Legacy,
