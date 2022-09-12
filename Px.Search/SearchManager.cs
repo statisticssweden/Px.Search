@@ -46,7 +46,6 @@ namespace Px.Search
         private FileSystemWatcher _dbConfigWatcher;
         private int _cacheTime;
         private DefaultOperator _defaultOperator;
-        private readonly SearchProviderVersion searchProviderVersion = SearchProviderVersion.Legacy;
 
         #endregion
 
@@ -501,22 +500,12 @@ namespace Px.Search
 
         private IPxSearchProvider GetSearchProvider(string database, string language)
         {
-            switch (searchProviderVersion)
-            {
-                case SearchProviderVersion.Legacy:
 #if NET48
                     return new Px.Search.Lucene.Legacy.LuceneSearchProvider(_databaseBaseDirectory, database, language);
-#else
-                    throw new NotSupportedException("Legacy lucene is only supported in .NET framework");
 #endif
-                case SearchProviderVersion.Version48:
 #if NETSTANDARD2_0
                     return new Px.Search.Lucene.LuceneSearchProvider(_databaseBaseDirectory, database, language);
-#else
-                    throw new NotSupportedException("Lucene 4 is only supported in .NET standard");
 #endif
-            }
-            return null;
         }
 
         /// <summary>

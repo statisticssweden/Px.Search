@@ -29,9 +29,13 @@
     <PackageReference Include="PCAxis.Menu" Version="1.0.1" />
     <PackageReference Include="PcAxis.Sql" Version="1.1.4" />
     <PackageReference Include="PX.Search.Abstractions" Version="1.1.0" />
-    <PackageReference Include="Px.Search.Lucene" Version="1.0.0" />
-    <PackageReference Include="Px.Search.Lucene.Legacy" Version="1.0.0" />
     <PackageReference Include="System.Runtime.Caching" Version="6.0.0" />
   </ItemGroup>
+	<ItemGroup Condition="$(TargetFramework.StartsWith('netstandard'))" >
+		<PackageReference Include="Px.Search.Lucene" Version="1.0.0" />
+	</ItemGroup>
+	<ItemGroup Condition="$(TargetFramework.StartsWith('net48'))" >
+		<PackageReference Include="Px.Search.Lucene.Legacy" Version="1.0.0" />
+	</ItemGroup>
 
 </Project>
