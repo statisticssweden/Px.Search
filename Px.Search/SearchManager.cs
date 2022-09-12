@@ -504,7 +504,7 @@ namespace Px.Search
             switch (searchProviderVersion)
             {
                 case SearchProviderVersion.Legacy:
-#if NET472
+#if NET48
                     return new Px.Search.Lucene.Legacy.LuceneSearchProvider(_databaseBaseDirectory, database, language);
 #else
                     throw new NotSupportedException("Legacy lucene is only supported in .NET framework");
