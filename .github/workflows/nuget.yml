@@ -16,6 +16,8 @@ jobs:
         fetch-depth: 0    
 
     - uses: microsoft/setup-msbuild@v1.1
+      with:
+        vs-version: '[16.9,)'
 
     - uses: NuGet/setup-nuget@v1
 
