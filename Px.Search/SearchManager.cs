@@ -12,11 +12,6 @@ using System.Xml;
 
 namespace Px.Search
 {
-    public enum SearchProviderVersion{
-        Legacy,
-        Version48
-    }
-
     public enum DatabaseType
     {
         CNMM,
